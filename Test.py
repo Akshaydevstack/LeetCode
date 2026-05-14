@@ -1,17 +1,15 @@
-# arr = [23,3,2342,24,34,34,3434,34,345,344,3]
 
+srt = "malayalm"
+def palindrome(s):
+    cleaned_text = "".join(char.lower() for char in s if char.isalpha())
 
+    left = 0
+    right = len(s)-1
 
-# def maximum(arr):
-#     big = arr[0]
-#     for i in range(len(arr)):
-#         if big > arr[i]:
-#             big = arr[i]
-#     return big
+    while left< right:
+        if cleaned_text[left] != cleaned_text[right]:
+            return False
+        
+        return True
 
-# print(maximum(arr))
-
-arr = [23,34,343,45,344,3,54,54,5645,6546756,756,7,657,5,6,32,4,234,3,455645788989,2,4,24,2]
-
-
-    
+print(palindrome(srt))
